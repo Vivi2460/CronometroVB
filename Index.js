@@ -1,8 +1,9 @@
 // DOM: Obtener elementos
 let tablero = document.getElementById("tablero");
-let boton_play = document.getElementById("boton_play");
-let boton_pause = document.getElementById("boton_pause");
-let boton_reset = document.getElementById("boton_reset");
+let boton_play = document.getElementById("boton_Inicio");
+let boton_pause = document.getElementById("boton_Pausa");
+let boton_reset = document.getElementById("boton_Reiniciar");
+let boton_reset = document.getElementById("boton_Vuelta");
 
 // Estados Cronometro
 let esta_activo = false;
