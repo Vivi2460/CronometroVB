@@ -1,9 +1,9 @@
 // DOM: Obtener elementos
 let tablero = document.getElementById("tablero");
-let boton_play = document.getElementById("boton_Inicio");
-let boton_pause = document.getElementById("boton_Pausa");
-let boton_reset = document.getElementById("boton_Reiniciar");
-let boton_reset = document.getElementById("boton_Vuelta");
+let boton_Inicio = document.getElementById("boton_Inicio");
+let boton_Pausa = document.getElementById("boton_Pausa");
+let boton_Reiniciar = document.getElementById("boton_Reiniciar");
+let boton_Vuelta = document.getElementById("boton_Vuelta");
 
 // Estados Cronometro
 let esta_activo = false;
@@ -41,24 +41,27 @@ function actualizar(){
         }   
 
 // Funciones Botones
-function play(){
+function Inicio(){
     if(esta_activo == false){
     esta_activo = true;
     actualizar();
     }
     }
-    function pause(){
+function Pausa(){
     esta_activo = false;
     }
-    function reset(){
+function Reiniciar(){
     time.decimas = 0;
     time.segundos = 0;
     time.minutos = 0;
     tablero.innerHTML = `${formato(time.minutos)}:${formato(time.segundos)}:${time.decimas}
     `
     }
+function Vuelta(){
+
 
 // Escuchar Eventos
-boton_play.addEventListener('click', play);
-boton_pause.addEventListener('click', pause);
-boton_reset.addEventListener('click', reset);
+boton_Inicio.addEventListener('click', Inicio);
+boton_Pausa.addEventListener('click', Pausa);
+boton_Reiniciar.addEventListener('click', Reiniciar);
+boton_Vuelta.addEventListener('click', Vuelta);
